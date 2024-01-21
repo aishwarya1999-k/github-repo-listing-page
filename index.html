@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>GitHub Repo Viewer</title>
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub Repositories Viewer</h1>
+    <div id="user-info" class="user-info">
+        <img id="user-avatar" class="user-avatar" src="images/blank-avatar-photo-icon-design-vector-30257190.jpg" alt="User Avatar">
+        <span id="user-username" class="user-username">Username: Adam</span>
+    </div>
+    <label for="username">GitHub Username:https://github.com/adam</label>
+    <input type="text" id="username" placeholder="Enter GitHub username">
+    <label for="perPage">Repositories per Page:</label>
+    <select id="perPage" onchange="getRepositories()">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    <button onclick="getRepositories()" id="getRepositoriesBtn">Get Repositories</button>
+    <div id="repositories"></div>
+    <div id="loader" class="loader"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
